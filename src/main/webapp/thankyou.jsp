@@ -9,6 +9,7 @@
 <body>
 	<h1>お問い合わせの送信が完了しました。</h1>
 	<p>ご連絡いただきありがとうございました。</p>
+	<p>またのご利用お待ちしております</p>
 	<a href="${pageContext.request.contextPath}/Profile">ホームに戻る</a>
 </body>
 </html>
