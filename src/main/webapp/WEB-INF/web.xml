@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <servlet>
+    <description></description>
+    <display-name>submitFinal</display-name>
+    <servlet-name>submitFinal</servlet-name>
+    <servlet-class>servlet.submitFinal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>submitFinal</servlet-name>
+    <url-pattern>/submitFinal</url-pattern>
+  </servlet-mapping>
+  <display-name>myprofile</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>SelfIntro</servlet-name>
+    <servlet-class>model.SelfIntro</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Contact</servlet-name>
+    <servlet-class>model.Contact</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Profile</servlet-name>
+    <servlet-class>model.Profile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SelfIntro</servlet-name>
+    <url-pattern>/SelfIntro</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Contact</servlet-name>
+    <url-pattern>/Contact</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Profile</servlet-name>
+    <url-pattern>/Profile</url-pattern>
+  </servlet-mapping>
+</web-app>

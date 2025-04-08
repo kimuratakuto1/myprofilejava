@@ -1,0 +1,162 @@
+body {
+    /* フォントをsans-serifに設定 */
+    font-family: sans-serif;
+    /* 行の高さを1.6倍に設定、ブラウザのデフォルトの行の高さを削除 */
+    line-height: 1.6;
+    /* 外側の余白を0に設定、ブラウザのデフォルトの余白を削除 */
+    margin: 0;
+    /* 内側の余白を0に設定、ブラウザのデフォルトの余白を削除 */
+    padding: 0;
+    /* 背景色を薄いグレーに設定 */
+    background-color: #f4f4f4;
+}
+
+header {
+    /* 背景色を濃いグレーに設定 */
+    background-color: #333;
+    /* テキスト色を白に設定 */
+    color: white;
+    /* 内側の余白を16pxに設定 */
+    padding: 16px;
+    /* テキストを中央揃えに設定 */
+    text-align: center;
+}
+
+main {
+    /* 最大幅を800pxに設定 */
+    max-width: 800px;
+    /* 上下のマージンを20px、左右のマージンを自動に設定 */
+    margin: 20px auto;
+    /* 内側の余白を20pxに設定 */
+    padding: 20px;
+    /* 背景色を白に設定 */
+    background-color: white;
+    /* 薄い影を追加 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    /* セクションの下部マージンを20pxに設定 */
+    margin-bottom: 20px;
+}
+
+div {
+    margin: 50px;
+}
+
+
+h2 {
+    /* 見出しの下部マージンを10pxに設定 */
+    margin-bottom: 10px;
+}
+
+.goalList {
+    /* 「目標一覧」リストの非表示 */
+    display: none;
+}
+
+label {
+    /* ラベルをインライン要素からブロック要素として表示、縦並び、幅が親要素の100%、高さや幅が指定できるようになる */
+    display: block;
+    /* ラベルの下部マージンを5pxに設定 */
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    /* 幅を100%に設定 */
+    width: 100%;
+    /* 内側の余白を10pxに設定 */
+    padding: 10px;
+    /* 下部のマージンを15pxに設定 */
+    margin-bottom: 15px;
+    /* 境界線をグレーに設定 */
+    border: 1px solid gray;
+    /* 要素の幅と高さにパディングとボーダーが含まれるように設定 */
+    box-sizing: border-box;
+}
+
+button {
+    /* 上下10px、左右15pxの内側余白を設定 */
+    padding: 10px 15px;
+    /* 背景色を濃いグレーに設定 */
+    background-color: #8b8b8b;
+    /* テキスト色を白に設定 */
+    color: white;
+    /* 境界線を削除 */
+    border: none;
+    /* カーソルをポインターに設定 */
+    cursor: pointer;
+    /* 幅を100%に設定 */
+    width: 100%;
+}
+
+button:hover {
+    /* ホバー時の背景色を設定 */
+    background-color: black;
+}
+
+nav {
+    /* ナビゲーションの上部マージンを20pxに設定 */
+    margin-top: 20px;
+}
+
+footer {
+    /* テキストを中央揃えに設定 */
+    text-align: center;
+    /* 内側の余白を16pxに設定 */
+    padding: 16px;
+    /* 背景色を濃いグレーに設定 */
+    background-color: #333;
+    /* テキスト色を白に設定 */
+    color: white;
+    /* 幅を100%に設定 */
+    width: 100%;
+    /* フッターの上部マージンを追加して位置を下げる */
+    margin-top: 255px;
+}
+
+#mainImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#profileName {
+    text-align: center;
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列に設定 */
+    grid-template-rows: repeat(2,0.1fr); /* 画像の高さを300pxに設定 */
+    gap: 0px; /* 画像間のスペース */
+    padding: 0px;
+    max-width: 1500px;
+    padding: 0 px;
+    margin: 0px;
+
+}
+
+.image-item {
+    text-align: center; /* 画像と文字を中央に配置 */
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.image-item img {
+    width: 90%;
+}
+
+.image-item p {
+    margin-top: 5px;
+    font-size: 20px;
+    color: #333;
+    width: 90%;
+
+}
