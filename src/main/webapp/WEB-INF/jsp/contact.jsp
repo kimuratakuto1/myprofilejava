@@ -15,7 +15,7 @@
     <main>
         <section>
             <h2>お問い合わせフォーム</h2>
-            <form id="form" action="/submit" method="post">
+            <form id="form" action="Contact" method="post">
                 <label for="name">名前:</label>
                 <input type="text" id="name" name="name" required>
 

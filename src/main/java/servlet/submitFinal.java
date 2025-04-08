@@ -4,11 +4,13 @@ import java.io.IOException;
 
 import dao.InquiryDAO;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Inquiry;
 
+@WebServlet("/submitFinal")
 public class submitFinal extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	

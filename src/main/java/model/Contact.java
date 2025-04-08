@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 @WebServlet("/Contact")
 public class Contact extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -30,5 +31,4 @@ public class Contact extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/confirm.jsp");
 		dispatcher.forward(request,response);
 	}
-
 }

@@ -3,6 +3,7 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import model.Inquiry;
 
@@ -12,6 +13,11 @@ public class InquiryDAO {
 	private final String DB_PASS = "";
 	
 	public boolean insert(Inquiry inquiry) {
+		try { 
+			Class.forName("org.h2.Driver");
+		} catch (ClassNotFoundException e) {
+			throw new IllegalStateException("JDBCドライバを読み込めませんでした");
+		}
 		try(Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)) {
 			String sql = "INSERT INTO inquiry(name,email,message) VALUES(?, ?, ?)";
 			try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -23,9 +29,15 @@ public class InquiryDAO {
 			int result = pstmt.executeUpdate();
 			return result == 1;
 			}
+		} catch (SQLException e) {
+		    System.err.println("SQLエラーが発生しました: " + e.getMessage());
+		    e.printStackTrace();
+		    return false;
 		} catch (Exception e) {
-			e.printStackTrace();
-			return false;
-		}
+		    System.err.println("予期しないエラーが発生しました: " + e.getMessage());
+		    e.printStackTrace();
+		    return false;
+			}
 	}
 }
+	
